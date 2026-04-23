@@ -1,14 +1,22 @@
-import "./globals.css";
-
 export const metadata = {
-  title: "AI TikTok Machine",
-  description: "Générateur de scripts TikTok IA"
+  title: "NexGen Studio",
+  description: "NexGen Studio auth app",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body
+        style={{
+          margin: 0,
+          fontFamily:
+            'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          background: "#0b1020",
+          color: "#ffffff",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
