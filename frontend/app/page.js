@@ -1,7 +1,12 @@
-export default function Home() {
-  return (
-    <main style={{ padding: 40 }}>
-      <h1>🔥 NexGen Studio fonctionne</h1>
-    </main>
-  );
-}
+const handleGoogleLogin = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: "https://nexgen-studio-np4p.vercel.app/auth/callback",
+    },
+  });
+
+  if (error) {
+    console.error(error.message);
+  }
+};
